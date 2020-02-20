@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.ApplicationInsights;
 using Microsoft.AspNetCore.Diagnostics;
 using aspnet_ai.Models;
+using System.Threading.Tasks;
 
 namespace aspnet_ai.Controllers
 {
@@ -31,6 +32,12 @@ namespace aspnet_ai.Controllers
         {
             _telemetry.TrackEvent($"Privacy requested @ {DateTime.UtcNow} UTC");
             return View();
+        }
+
+        public async Task<IActionResult> SlowPage()
+        {
+            await Task.Delay(3000);
+            throw new Exception("I'm a very slow page");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
