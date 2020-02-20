@@ -7,6 +7,12 @@ Fore more information, visit: [Adding Application Insights telemetry to your
 ASP.NET Core website | HildenCo](https://blog.hildenco.com/2020/03/adding-application-insights-telemetry.html)
 
 ## Running
+This repo contains 3 solutions:
+* Simple Application Insights demo
+* Suppressing Telemetry on Application Insights demo
+* Simple Alert based on Application Insights demo
+
+### Simple Application Insights demo
 To run the base version, use the code available on `master` branch:
 ```
 git clone https://github.com/hd9/aspnet-ai.git
@@ -14,6 +20,7 @@ cd aspnet-ai/src
 dotnet run
 ```
 
+### Simple Telemetry demo
 To run the version that suppresses telemetry, run the code available on the
 `telemetry` branch:
 ```
@@ -23,9 +30,19 @@ cd aspnet-ai/src
 dotnet run
 ```
 
-Don't forget to add your [Instrumentation
-Key](https://docs.microsoft.com/en-us/azure/azure-monitor/app/create-new-resource)
-to your `appSettings.json`.
+### Simple Alert demo
+To run the version that suppresses telemetry, run the code available on the
+`alerts` branch:
+```
+git clone https://github.com/hd9/aspnet-ai.git
+git checkout alerts
+cd aspnet-ai/src
+dotnet run
+```
+
+## Configuration
+To work, this solution requires a valid [Instrumentation Key](https://docs.microsoft.com/en-us/azure/azure-monitor/app/create-new-resource)
+on your `appSettings.json`.
 
 ## Thanks!
 And don't forget to visit [blog.hildenco.com](https://blog.hildenco.com).
