@@ -17,6 +17,7 @@ To run the base version, use the code available on `master` branch:
 ```
 git clone https://github.com/hd9/aspnet-ai.git
 cd aspnet-ai/src
+# add your instrumentation key to src/appSettings.Development.json
 dotnet run
 ```
 
@@ -27,16 +28,18 @@ To run the version that suppresses telemetry, run the code available on the
 git clone https://github.com/hd9/aspnet-ai.git
 git checkout telemetry
 cd aspnet-ai/src
+# add your instrumentation key to src/appSettings.Development.json
 dotnet run
 ```
 
 ### Simple Alert demo
-To run the version that suppresses telemetry, run the code available on the
-`alerts` branch:
+To run the version that produces Application Insights alerts, run the code
+available on the `alerts` branch:
 ```
 git clone https://github.com/hd9/aspnet-ai.git
 git checkout alerts
 cd aspnet-ai/src
+# add your instrumentation key to src/appSettings.Development.json
 dotnet run
 ```
 
